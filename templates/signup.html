@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>SIGNUP FOR REDDIT BOT</title>
+ <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" /> -->
+</head>
+
+<body>
+    
+    <div class = "dropdown" style="text-align: center;">
+        
+        <h1 align = "center">Enter Your Details Below</h1>
+        <p align="center"> By entering your details below you will be able to login to use the Reddit Bot interface</p>
+        
+           <form action={{ url_for('signup')}} method="POST">
+            <input placeholder="First Name" type = "text", align = "center", name = "firstname", id = "first_name"/>
+            <input placeholder="Last Name" type = "text", align = "center", name = "lastname", id = "last_name"/>
+            <input placeholder="Email" type = "text", align = "center", name = "email", id = "e_mail"/>
+            <input placeholder="Username" type = "text", align = "center", name = "username", id = "user_name"/>
+            <input placeholder="Password" type = "text", align = "center", name = "pass_word", id = "pass_word"/>
+            <input type="submit", value="Submit"></input>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div>{{ messages[0] }} {% endif %}
+                {% endwith %} </div>
+            
+           </form>
+           
+           
+</body>
+</html>

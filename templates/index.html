@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>REDDIT BOT</title>
+</head>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" /> -->
+<body>
+    <a href="{{ url_for('logout') }}">Logout</a>
+        
+    <div class = "dropdown" style="text-align: center;">
+    <h1 align = "center">Reddit Bot</h1>
+    <p align="center"> By clicking the button below you will get a list of the 100 hottest Reddit Posts with the following attributes, title, score of the post, number of comments, date created and the url of the post <br></br><a href="data" ><button class=grey style="height:75px;width:150px">Reddit Data Table</button></a>
+       <form action={{url_for('index')}} method="POST">
+        <input placeholder="input No of records" type = "number", align = "center", name = "records", id = "record"/>
+        <select type = "text", name="Sub-reddit", id="subreddits">
+        <input type="submit" value="Submit"/>
+        </form>
+        <option placeholder = "Sub-reddit", name = "subr", id = "selected", class=dropdown></option>
+        </select>
+    </div>
+</p>
+    <script>
+    var subredditarray = {{subr | safe}};   
+    console.log(subredditarray);
+
+    var select = document.getElementById("subreddits")
+
+  
+
+    for (var i = 0; i < subredditarray.length; i++) {
+        var item = subredditarray[i];
+        var el = document.createElement("option");
+        el.textContent = item;
+        el.value = item;
+        select.appendChild(el);
+  }
+    </script>
+</body>
+</html>
