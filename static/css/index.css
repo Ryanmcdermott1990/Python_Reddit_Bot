@@ -1,33 +1,88 @@
 body {
   font-family: 'Share Tech', sans-serif;
+  background-color: rgba(223, 223, 248, 0.2);
   background-color: #e5e5f7;
-  background-image:  linear-gradient(30deg, #9fbcd3 12%, transparent 12.5%, transparent 87%, #9fbcd3 87.5%, #9fbcd3), linear-gradient(150deg, #9fbcd3 12%, transparent 12.5%, transparent 87%, #9fbcd3 87.5%, #9fbcd3), linear-gradient(30deg, #9fbcd3 12%, transparent 12.5%, transparent 87%, #9fbcd3 87.5%, #9fbcd3), linear-gradient(150deg, #9fbcd3 12%, transparent 12.5%, transparent 87%, #9fbcd3 87.5%, #9fbcd3), linear-gradient(60deg, #9fbcd377 25%, transparent 25.5%, transparent 75%, #9fbcd377 75%, #9fbcd377), linear-gradient(60deg, #9fbcd377 25%, transparent 25.5%, transparent 75%, #9fbcd377 75%, #9fbcd377);
-  background-size: 20px 35px;
-  background-color: rgba(0,0,0,0.1);
-  background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+  background-image:  linear-gradient(30deg, #fcfcfc 12%, transparent 12.5%, transparent 87%, #fcfcfc 87.5%, #fcfcfc), linear-gradient(150deg, #fcfcfc 12%, transparent 12.5%, transparent 87%, #fcfcfc 87.5%, #fcfcfc), linear-gradient(30deg, #fcfcfc 12%, transparent 12.5%, transparent 87%, #fcfcfc 87.5%, #fcfcfc), linear-gradient(150deg, #fcfcfc 12%, transparent 12.5%, transparent 87%, #fcfcfc 87.5%, #fcfcfc), linear-gradient(60deg, #fcfcfc77 25%, transparent 25.5%, transparent 75%, #fcfcfc77 75%, #fcfcfc77), linear-gradient(60deg, #fcfcfc77 25%, transparent 25.5%, transparent 75%, #fcfcfc77 75%, #fcfcfc77);
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
 
 h1 {
   font-size: 60px;
 }
 
+select {
+  font-family: 'Share Tech', sans-serif;
+}
+
+select:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+select:focus {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+select:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
 .specialinput {
   color: #333;
   font-size: 1.2rem;
-	margin: 0 auto;
-  padding: 1.5rem 2rem;
-  border-radius: 0.2rem;
+  margin: 0 auto;
+  padding: 1.2rem 0.5rem;
+  border-radius: 0.1rem;
   background-color: rgb(255, 255, 255);
   border: none;
-  width: 2em;
+  width: 3.5em;
   height: 0.4em;
   border-bottom: 0.3rem solid transparent;
   transition: all 0.3s;
+  border: 1px solid;
+  border-color: #333;
 }
 
-p
-{
-font-size: 20px;
+.specialdropdown {
+  font-family: 'Share Tech', sans-serif;
+  color: rgb(0, 0, 0);
+  background: white;
+  padding-bottom: 0.6rem;
+  padding-top: 0.6;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  width: em;
+}
+
+.specialdropdown:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+
+.specialdropdown:focus {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+
+}
+
+.specialdropdown:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
+p {
+  font-size: 25px;
+
+}
+
+strong {
+  font-size: 25px;
 
 }
 
@@ -38,12 +93,12 @@ font-size: 20px;
   background-color: #FCFCFD;
   border-radius: 4px;
   border-width: 0;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
   box-sizing: border-box;
   color: #36395A;
   cursor: pointer;
   display: inline-flex;
-  font-family: "JetBrains Mono",monospace;
+  font-family: "JetBrains Mono", monospace;
   height: 48px;
   justify-content: center;
   line-height: 1;
@@ -54,12 +109,12 @@ font-size: 20px;
   position: relative;
   text-align: left;
   text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
+  transition: box-shadow .15s, transform .15s;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
-  will-change: box-shadow,transform;
+  will-change: box-shadow, transform;
   font-size: 18px;
 }
 
@@ -78,15 +133,16 @@ font-size: 20px;
 }
 
 .flex {
-    display: flex;
-    border: 0.1rem;
-    border-style: solid;
-    border-color:dimgray;
-    margin-bottom: 5rem;
-    margin-top: 5rem;
-    width: 2000px;
-    height: 500px
+  display: flex;
+  border: 0.1rem;
+  border-style: solid;
+  border-color: dimgray;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  width: 2000px;
+  height: 500px
 }
+
 .dropdown {
 
   margin: auto;
@@ -94,9 +150,10 @@ font-size: 20px;
   padding-left: 50px;
 
 }
+
 .items {
-   
-    align-items: center;
-    align-self: auto;
-    align-content: center;
+
+  align-items: center;
+  align-self: auto;
+  align-content: center;
 }

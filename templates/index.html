@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,33 +8,38 @@
     <title>REDDIT BOT</title>
 </head>
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" /> -->
-
 <body>
-    <a href="{{ url_for('logout') }}">Logout</a>
+   
+    <a href="{{ url_for('logout') }}"><button class = "button-30">Logout</button></a>
 
     <div class="dropdown" style="text-align: center;">
         <h1 align="center">Reddit Bot</h1>
-        <p align="center"> By clicking the button below you will get a list of the 100 hottest Reddit Posts with the
-            following attributes, title, score of the post, number of comments, date created and the url of the post
+        <p align="center"> Simply select from the list of the 10 most popular sub-reddits and input the number of posts you would like to display. 
+                               Upon clicking submit will trigger a process to retrieve the data, once this process is complete, click on "View Processed Data" to see the results. 
+            Enjoy!
             <br></br><a href="data">
-                <button class="button-30", role="button">View Processed Data</button></a>
+                <button class="button-30" , role="button">View Processed Data</button></a>
         <form action={{url_for('index')}} method="POST">
-            <input class = "specialinput", placeholder="input No of records" type="number" , align="center" , name="records" , id="record" />
-            <select type="text" , name="Sub-reddit" , id="subreddits">
-                <input class="button-30" type="submit" value="Submit" />
+            <strong>Select Sub-Reddit</strong>
+            <div>
+                <select class="specialdropdown", type="text" , name="Sub-reddit" , id="subreddits"></select>
+            </div>
+            <br></br>
+            <div>
+            <strong>Input the Number of Posts you Want to Display</strong>
+            </div>
+            <input class="specialinput", type="number" , align="center" ,
+                name="records", id="record"/>
+            <input class="button-30" type="submit" value="Submit" />
         </form>
-        <option placeholder="Sub-reddit" , name="subr" , id="selected" , class=dropdown></option>
+        <option placeholder="Sub-reddit", name="subr", id="selected"></option>
         </select>
     </div>
     </p>
     <script>
         var subredditarray = {{ subr | safe}};
         console.log(subredditarray);
-
         var select = document.getElementById("subreddits")
-
-
-
         for (var i = 0; i < subredditarray.length; i++) {
             var item = subredditarray[i];
             var el = document.createElement("option");
@@ -45,5 +49,4 @@
         }
     </script>
 </body>
-
 </html>
