@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
  <title>LOGIN FOR REDDIT BOT</title>
- <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" /> -->
 </head>
 <body>
+    <a href="{{ url_for('signup') }}"><button class = "button-30">Signup</button></a>
     <div class = "dropdown" style="text-align: center;">
-        <h1 align = "center">Enter Your Username and Password</h1>
-        <p align="center"> By entering your credentials below you will be able to login to use the Reddit Bot interface</p>
+        <h1>REDDIT BOT</h1>
+        <h1 align = "center">Please Enter Your Username and Password</h1>
+        <p align="center"> By entering your credentials below you will be able to login to use the Reddit Bot interface to display and chart data from 10 of the most popular Sub-Reddits</p>
+        <p align="center"> Don't have an account, click on the Signup button on the top left of the page to create an account</p>
            <form action={{ url_for('login')}} method="POST">
-            <input placeholder="Username" type = "text", align = "center", name = "username", id = "user_name"/>
-            <input placeholder="Password" type = "text", align = "center", name = "pass_word", id = "pass_word"/>
-            <input type="submit" value="Submit"></input>
+            <input class = "button-30", placeholder="Username" type = "text", align = "center", name = "username", id = "user_name" required/>
+            <input class = "button-30", placeholder="Password" type = "password", align = "center", name = "pass_word", id = "pass_word" required/>
+            <input class = "button-30", type="submit" value="Submit"></input>
+            <br></br>
             {% with messages = get_flashed_messages() %}
             {% if messages %}
-            <div>{{ messages[0] }} {% endif %}
+            <div class = "flash-message-login fadeOut">{{ messages[0] }} {% endif %}
                 {% endwith %} </div>
-            </form
+            </form>
 </body>
 </html>

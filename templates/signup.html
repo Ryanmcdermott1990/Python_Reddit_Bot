@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
  <title>SIGNUP FOR REDDIT BOT</title>
  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" /> -->
 </head>
 
 <body>
-    
+    <a href="{{ url_for('login') }}"><button class = "button-30">Login</button></a>
     <div class = "dropdown" style="text-align: center;">
         
         <h1 align = "center">Enter Your Details Below</h1>
         <p align="center"> By entering your details below you will be able to login to use the Reddit Bot interface</p>
-        
+        </div>
+        <div class = "specialform">
            <form action={{ url_for('signup')}} method="POST">
-            <input placeholder="First Name" type = "text", align = "center", name = "firstname", id = "first_name"/>
-            <input placeholder="Last Name" type = "text", align = "center", name = "lastname", id = "last_name"/>
-            <input placeholder="Email" type = "text", align = "center", name = "email", id = "e_mail"/>
-            <input placeholder="Username" type = "text", align = "center", name = "username", id = "user_name"/>
-            <input placeholder="Password" type = "text", align = "center", name = "pass_word", id = "pass_word"/>
-            <input type="submit", value="Submit"></input>
+            <input class = "button-30-long", placeholder="First Name" type = "text", align = "center", name = "firstname", id = "first_name"/>
+            <br></br>
+            <input class = "button-30-long", placeholder="Last Name" type = "text", align = "center", name = "lastname", id = "last_name"/>
+            <br></br>
+            <input class = "button-30-long", placeholder="Email" type = "text", align = "center", name = "email", id = "e_mail" required/>
+            <br></br>
+            <input class = "button-30-long", placeholder="Username" type = "text", align = "center", name = "username", id = "user_name" required/>
+            <br></br>
+            <input class = "button-30-long", placeholder="Password" type = "text", align = "center", name = "pass_word", id = "pass_word" required/>
+            <br></br>
+            <input class = "button-30", type="submit", value="Submit"></input>
+            <br></br>
+            <div class = "flash-message fadeOut">
             {% with messages = get_flashed_messages() %}
             {% if messages %}
             <div>{{ messages[0] }} {% endif %}
                 {% endwith %} </div>
-            
+            </div>
+            </div>
            </form>
+        
            
            
 </body>

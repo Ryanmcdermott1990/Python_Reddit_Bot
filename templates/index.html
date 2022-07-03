@@ -7,9 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
     <title>REDDIT BOT</title>
 </head>
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" /> -->
 <body>
-   
     <a href="{{ url_for('logout') }}"><button class = "button-30">Logout</button></a>
 
     <div class="dropdown" style="text-align: center;">
@@ -22,7 +20,7 @@
         <form action={{url_for('index')}} method="POST">
             <strong>Select Sub-Reddit</strong>
             <div>
-                <select class="specialdropdown", type="text" , name="Sub-reddit" , id="subreddits"></select>
+                <select class="specialdropdown", type="text", name="Sub-reddit" , id="subreddits"></select>
             </div>
             <br></br>
             <div>

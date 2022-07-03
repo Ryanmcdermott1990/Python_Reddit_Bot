@@ -161,7 +161,7 @@ def signup_post():
                       pass_word=generate_password_hash(pass_word, method='sha256'))
 
         if username in usernameset:
-            flash("username already exists, please enter a unique email")
+            flash("Username already exists, please enter a unique username!")
             return redirect(url_for('signup'))
 
         else:

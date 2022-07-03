@@ -2,7 +2,7 @@ body {
   font-family: 'Share Tech', sans-serif;
   background-color: rgba(223, 223, 248, 0.2);
   background-color: #e5e5f7;
-  background-image:  linear-gradient(30deg, #fcfcfc 12%, transparent 12.5%, transparent 87%, #fcfcfc 87.5%, #fcfcfc), linear-gradient(150deg, #fcfcfc 12%, transparent 12.5%, transparent 87%, #fcfcfc 87.5%, #fcfcfc), linear-gradient(30deg, #fcfcfc 12%, transparent 12.5%, transparent 87%, #fcfcfc 87.5%, #fcfcfc), linear-gradient(150deg, #fcfcfc 12%, transparent 12.5%, transparent 87%, #fcfcfc 87.5%, #fcfcfc), linear-gradient(60deg, #fcfcfc77 25%, transparent 25.5%, transparent 75%, #fcfcfc77 75%, #fcfcfc77), linear-gradient(60deg, #fcfcfc77 25%, transparent 25.5%, transparent 75%, #fcfcfc77 75%, #fcfcfc77);
+  background-image: linear-gradient(30deg, #fcfcfc 12%, transparent 12.5%, transparent 87%, #fcfcfc 87.5%, #fcfcfc), linear-gradient(150deg, #fcfcfc 12%, transparent 12.5%, transparent 87%, #fcfcfc 87.5%, #fcfcfc), linear-gradient(30deg, #fcfcfc 12%, transparent 12.5%, transparent 87%, #fcfcfc 87.5%, #fcfcfc), linear-gradient(150deg, #fcfcfc 12%, transparent 12.5%, transparent 87%, #fcfcfc 87.5%, #fcfcfc), linear-gradient(60deg, #fcfcfc77 25%, transparent 25.5%, transparent 75%, #fcfcfc77 75%, #fcfcfc77), linear-gradient(60deg, #fcfcfc77 25%, transparent 25.5%, transparent 75%, #fcfcfc77 75%, #fcfcfc77);
   background-size: 80px 140px;
   background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
@@ -55,7 +55,9 @@ select:active {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  width: em;
+  width: 14em;
+  border-radius: 10px;
+  font-size: 1em;
 }
 
 .specialdropdown:hover {
@@ -75,9 +77,20 @@ select:active {
   transform: translateY(2px);
 }
 
+canvas {
+  background-color: white;
+  opacity: 0.7;
+
+}
+
 
 p {
   font-size: 25px;
+
+}
+
+thead {
+  border: 1px solid;
 
 }
 
@@ -85,6 +98,174 @@ strong {
   font-size: 25px;
 
 }
+
+.styled-table {
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+  background-color: white;
+  opacity: 0.7;
+  width: 2000px;
+}
+
+th {
+  background-color: #f2f2f2;
+  height: 0.4em;
+
+}
+
+.specialform {
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  right: 65%;
+  left: 35%;
+  position: absolute;
+
+}
+
+th,
+td {
+  width: auto;
+
+}
+
+/* tr:nth-child(even){background-color: #f2f2f2} */
+
+
+tr:hover {
+  background-color: rgba(28, 79, 173, 0.667);
+}
+
+.button-30-long {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s, transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+  width: 40em;
+}
+
+/* .button-30:required {
+  border-color: #800000;
+  border-width: 1px;
+} */
+
+.button-30:required:invalid {
+  border-color: #c00000;
+}
+
+/* .button-30-long:required {
+  border-color: #800000;
+  border-width: 1px;
+} */
+
+.button-30-long:required:invalid {
+  border-color: #c00000;
+}
+
+.flash-message {
+
+  width: 24em;
+  text-align: left;
+  color: white;
+  background-color: firebrick;
+  font-size: 20px;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+.flash-message-login {
+
+  width: 30em;
+  text-align: right;
+  color: white;
+  background-color: firebrick;
+  font-size: 20px;
+  align-content: center;
+  align-items: center;
+  display: inline-flex;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
 
 /* CSS */
 .button-30 {
@@ -144,7 +325,6 @@ strong {
 }
 
 .dropdown {
-
   margin: auto;
   width: 50%;
   padding-left: 50px;
