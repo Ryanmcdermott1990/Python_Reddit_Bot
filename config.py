@@ -1,11 +1,11 @@
 import praw
-from flask import Flask, request, render_template
-import pandas as pd
-import psycopg2
-from sqlalchemy import create_engine
+
+#This file is used to store all configuration information 
+#Look up how to create a Reddit App on how to get each of these details
 
 reddit = praw.Reddit(
-    client_id="exuHx7RyoQLGG7aAwegocg",
-    client_secret="XLml4bscH9DL8PPXcoFJFU3nYqjJGA",
-    user_agent="macOS:com.dataAnalysis.myredditapp:v0.0.1 (by /u/SadMoney7025)",
+    client_id="{INSERT CLIENT ID}",
+    client_secret="{INSERT CLIENT SECRET}",
+    user_agent="{INSERT USER AGENT}", 
+    
 )

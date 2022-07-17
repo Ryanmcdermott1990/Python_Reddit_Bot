@@ -1,13 +1,9 @@
-import praw
-from flask import Flask, request, render_template
-import pandas as pd
-import config
 import psycopg2
 from sqlalchemy import create_engine
-# from config import config
 
+#This file is to be used to store all the connection information
 
-conn_string = 'postgresql://Ryan:root@localhost:5432/postgres'
+conn_string = '{dbname}://{username}:{password}@{localhost:port}/{postgres}'
 db = create_engine(conn_string)
 conn = db.connect()
 conn = psycopg2.connect(conn_string)
