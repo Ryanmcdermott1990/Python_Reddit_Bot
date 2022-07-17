@@ -1,8 +1,12 @@
-![Example 1]()
+![Example 1](https://github.com/Ryanmcdermott1990/redditBot/blob/main/Examples/login.gif)
 
 #+++++#-----#+++++#-----#+++++#-----#+++++#-----#+++++#-----#+++++#
 
-![Example 2]()
+![Example 2](https://github.com/Ryanmcdermott1990/redditBot/blob/main/Examples/Python_Data.gif)
+
+#+++++#-----#+++++#-----#+++++#-----#+++++#-----#+++++#-----#+++++#
+
+![Example 2](https://github.com/Ryanmcdermott1990/redditBot/blob/main/Examples/signup.gif)
 
 # Python - Reddit Bot
 Through this project I learned how to use Flask, a very robust and easy to use Python backend framework that allows for defining routes, rendering templated inforamtion in the front-end and even has a login manager to make logging in and out your users safe, robust and simple to configure / refactor.   
